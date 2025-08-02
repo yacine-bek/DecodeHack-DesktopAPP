@@ -55,7 +55,6 @@ class Manager {
     );
 
     tools[tool.id] = tool;
-    print('Tool added to SQLite successfully');
   }
 
   Future<void> _loadToolsFromDb() async {
@@ -71,6 +70,5 @@ class Manager {
   Future<void> loadTools() async {
     tools.clear();
     await _loadToolsFromDb();
-    print('Tools loaded from SQLite.');
   }
 }
